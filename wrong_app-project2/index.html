@@ -1,0 +1,245 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Fashionista</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" />
+	<link rel = "stylesheet" href = "css/style.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+    <body>
+        <div data-role = "page" id = "home" data-theme="a">
+            <div data-role = "header" data-position ="fixed">
+                <h1>Clothing Categories</h1>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true">
+                    <p align=center><img src ="images/JC-logo2.png" width=50%></p>
+                </ul>
+        
+                <p>Add your clothing items and keep a detailed log.</p>
+                <p><a href="#" data-role="button" data-icon="arrow-r" data-iconpos="right">Add Clothing Item (Work in Progress)</a></p>
+                <ul data-role="listview" data-inset="true" data-filter="true">
+                    <p align=center><img src ="images/repeatingbg2.png" width=90%></p>
+                </ul>
+                <p><a href = "#brclothes" data-role="button" data-icon="arrow-r" data-iconpos="right">Browse</a></p> 
+                <p><a href = "#myrecent" data-role="button" data-icon="star" data-iconpos="right">Recent Items</a></p>
+            </div>
+            <div data-role = "footer" data-position = "fixed">
+                <h4>Footer</h4>
+            </div>
+        </div>
+        
+        <div data-role="page" id="myrecent" data-theme="a">
+            <div data-role="header" data-position="fixed">
+                <h1>My Recent Added Items</h1>
+                <a href="#" data-rel="back" data-icon="arrow-l" class="ui-btn-left" data-theme="a">Back</a>
+            </div>
+            <div data-role ="content">
+                <p align=center><img src ="images/JC-logo3.png" width=60%></p>
+                <ul data-role ="listview" data-inset="true" data-theme="a">
+                    <li>
+                        <img src = "images/shoes.png" width=100px height=100px>
+                        <h3>Red High Heels</h3>
+                        <p>Added:11-01-2011 bought at Macy's to go with my red party dress!</p>
+                    </li>
+                    <li>
+                   
+                        <img src = "images/skirt.png" width=100px height=100px>
+                        <h3>Red Dress</h3>
+                        <p>Added:11-01-2011 bought at Macy's for party</p>
+                   
+                    </li>
+                    <li>
+                        <img src = "images/smallbag.png" width=100px height=100px>
+                        <h3>Gold Purse</h3>
+                        <p>Added:10-25-2011 bought at Wal-Mart, I just liked it!</p>
+                    </li>
+                    <li>
+                        <img src = "images/earrings.png" width=100px height=100px>
+                        <h3>Pearl Earrings</h3>
+                        <p>Added:10-18-2011 bought at Mall on sale 50% off!</p>
+                    </li>
+                </ul>
+            </div>
+            <div data-role = "footer" data-position = "fixed">
+                <h4>Footer</h4>
+            </div>
+        </div>
+        
+        <div data-role="page" id="brclothes" data-theme="a">
+            <div data-role="header" data-position="fixed">
+                <h1>Browse Clothing</h1>
+                <a href="#" data-rel="back" data-icon="arrow-l" class="ui-btn-left" data-theme="a">Back</a>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true">
+                    <p align=center><img src="images/JC-logo2.png" width=50%></p>
+                </ul>
+            
+                <div data-role="collapsible-set">
+                    <div data-role="collapsible" data-collapsed="true" data-theme="a">
+                        <h3>Shoes</h3>
+                        <ul data-role = "listview" data-inset="true" data-theme="a">
+                            <li>
+                                <h3>Heels</h3>
+                                <p>Add your type of heel here!</p>
+                            </li>
+                            <li>
+                                <h3>Sandals</h3>
+                                <p>Add your type of heel here!</p>
+                            </li>
+                            <li>
+                                <h3>Sneakers</h3>
+                                <p>Add your type of sneaker here!</p>
+                            </li>
+                            <li>
+                                <h3>Boots</h3>
+                                <p>Add your type of boot here</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-role="collapsible" data-collapsed="true" data-theme="a">
+                        <h3>Tops</h3>
+                        <ul data-role = "listview" data-inset="true" data-theme="a">
+                            <li>
+                                <h3>T-shirts</h3>
+                                <p>Add your T here!</p>
+                            </li>
+                            <li>
+                                <h3>Long Sleeves</h3>
+                                <p>Add your Long-Sleeve here!</p>
+                            </li>
+                            <li>
+                                <h3>Blouses</h3>
+                                <p>Add your Blouse here!</p>
+                            </li>
+                            <li>
+                                <h3>Tank Tops</h3>
+                                <p>Add your Tank here!</p>
+                            </li>
+                            <li>
+                                <h3>Hoodies</h3>
+                                <p>Add your Hoodie here</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-role="collapsible" data-collapsed="true" data-theme="a">
+                        <h3>Jewelry</h3>
+                        <ul data-role = "listview" data-inset="true" data-theme="a">
+                            <li>
+                                <h3>Earrings</h3>
+                                <p>Add your Earrings here!</p>
+                            </li>
+                            <li>
+                                <h3>Necklaces</h3>
+                                <p>Add your Necklaces here!</p>
+                            </li>
+                            <li>
+                                <h3>Rings</h3>
+                                <p>Add your Rings here!</p>
+                            </li>
+                            <li>
+                                <h3>Bracelets</h3>
+                                <p>Add your Bracelets here</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-role="collapsible" data-collapsed="true" data-theme="a">
+                        <h3>Handbags</h3>
+                        <ul data-role = "listview" data-inset="true" data-theme="a">
+                            <li
+                                <h3>Clutch</h3>
+                                <p>Add your Clutch here!</p>
+                            </li>
+                            <li>
+                                <h3>Small Bag</h3>
+                                <p>Add your Small Bag here!</p>
+                            </li>
+                            <li>
+                                <h3>Medium Bag</h3>
+                                <p>Add your Medium Bag here!</p>
+                            </li>
+                            <li>
+                                <h3>Large Bag</h3>
+                                <p>Add your Large Bag here</p>
+                            </li>
+                            <li>
+                            	<h3>Wristlets</h3>
+                            	<p>Add your Wristlet here!</p>
+                            </li>
+                        </ul>
+                    </div>
+                	<div data-role="collapsible" data-collapsed="true" data-theme="a">
+                        <h3>Bottoms</h3>
+                        <ul data-role = "listview" data-inset="true" data-theme="a">
+                            <li>
+                                <h3>Jeans</h3>
+                                <p>Add your Jeans here!</p>
+                            </li>
+                            <li>
+                                <h3>Khaki's</h3>
+                                <p>Add your Khaki's here!</p>
+                            </li>
+                            <li>
+                                <h3>Dress/Suit Pants</h3>
+                                <p>Add your Dress Pants here!</p>
+                            </li>
+                            <li>
+                                <h3>Skirts</h3>
+                                <p>Add your Skirts here</p>
+                            </li>
+                            <li>
+                            	<h3>Shorts</h3>
+                            	<p>Add your Shorts here!</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              
+                <div class = "ui-grid-b">
+                    <div class = "ui-block-a"><img src = "images/skirt.jpg" width = 50%></div>
+                    <div class = "ui-block-b"><img src = "images/jeans.jpg" width = 50%></div>
+                    <div class = "ui-block-c"><img src = "images/bracelet.jpg" width = 50%></div>
+                    <div class = "ui-block-a"><img src = "images/shoes.jpg" width = 50%></div>
+                    <div class = "ui-block-b"><img src = "images/lgpurse.jpg" width = 50%></div>
+                    <div class = "ui-block-c"><img src = "images/blouse.jpg" width = 50%></div>
+                    <div class = "ui-block-a"><img src = "images/necklace.jpg" width = 50%></div>
+                    <div class = "ui-block-b"><img src = "images/hoodie.jpg" width = 50%></div>
+                    <div class = "ui-block-c"><img src = "images/sandals.jpg" width = 50%></div>
+                </div>
+            </div>
+       				    
+            <div data-role="footer" data-position="fixed">
+                <a href="http://github.com/janellesalisbury/Salisbury_Janelle_Project2">Raw</a>
+                <a href="http>//github.com/janellesalisbury/Salisbury_Janelle_Project2/blob/master.index.com">Live</a>
+                <a href="http://github.com/janellesalisbury/Salisbury_Janelle_Project2/branches/gh-pages">GH Pages</a>
+                <a href="#home">Home</a>
+            </div>
+
+            
+        </div>
+
+	<!-- JavaScript under here -->
+
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+	<script type = "text/javascript" src = "js/main.js"></script>
+
+  </body>
+</html>
