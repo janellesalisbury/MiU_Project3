@@ -265,11 +265,12 @@
             </div>
         </div>
         	<div data-role="page" id = "additem" data-add-back-btn="true" data-theme="f">
-        		<p align=center><img src ="images/JC-logo3.png" width = 60%></p>
         		<div data-role= "header" data-position= "fixed">
+        		
         			<h1>Add Clothing Item</h1>
         		</div>
         		<div data-role="content">
+        		<p align=center><img src ="images/JC-logo3.png" width=60%></p>
         			<form action ="" method="post" id= "add item">
         				<div data-role= "field contain">
         					<label for= "item name">Item Name:</label>
@@ -278,6 +279,17 @@
         				<div data-role= "field contain">
         					<label for= "brand">Brand:</label>
         						<input type= "text" name= "brand" id= "brand"/>
+        				</div>
+        				<div data-role= "field contain">
+        					<fieldset data-role= "control group">
+        						<legend>Size:</legend>
+        						<input type= "radio" value= "no" name= "size" id= "size-1"/>
+        						<label for= "size-1">Small</label>
+        						<input type= "radio" value= "yes" name= "size" id= "size-2"/>
+        						<label for= "size-2">Medium</label>
+        						<input type= "radio" value= "no" name= "size" id= "size-3"/>
+        						<label for= "size-3">Large</label>
+        					</fieldset>
         				</div>
         			
         			
