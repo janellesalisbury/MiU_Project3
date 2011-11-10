@@ -264,31 +264,28 @@
         					</fieldset>
         				</div>
         				<div data-role= "field contain">
-        					<label for= "quantity">Item Quantity</label>
-        						<input type= "range" name= "item quantity" id= "item quantity" value= "1" min= "1" max= "10"/>
-        				</div>
-        				<div data-role= "field contain">
         					<label for = "item-quantity">Quantity</label>
         					<select name= "item-quantity" id= "item-quantity" class= "required">
         					<option data-placeholder= "true">Please Select Quantity:</option>
         					<optgroup label= "Quantity">
-        					<option value= "one">Red</option>
-        					<option value= "two">Orange</option>
-        					<option value= "three">Yellow</option>
-        					<option value= "four">Green</option>
-        					<option value= "five">Blue</option>
-        					<option value= "six">Black</option>
-        					<option value= "seven">White</option>
+        					<option value= "one">One</option>
+        					<option value= "two">Two</option>
+        					<option value= "three">Three</option>
+        					<option value= "four">Four</option>
+        					<option value= "five">Five</option>
+        					<option value= "six">Six</option>
+        					<option value= "seven">Seven</option>
         					<option value= "other">Other</option>
         					</optgroup>
         					</select>
         				</div>
         				<div data-role="field contain">
-        					<fieldset data-role= "control group">
-        						<legend>Dry Clean Only?</legend>
-        						<input type= "checkbox" value= "yes" name= "cleaning choice" id= "cleaning-choice-1" class= "required"/>
-        						<label for= "cleaning-choice-1">Yes</label>
-        					</fieldset>
+        					<label for= "dry-clean">Dry Clean Only:</label>
+        						<select name= "slider" id= "dry-clean" data-role= "slider">
+        							<option value= "no">No</option>
+        							<option value= "yes">Yes</option>
+        						</select>
+        				</div>
         				<div data-role= "field contain">
         					<label for= "notes">Notes:</label>
         						<textarea></textarea>
