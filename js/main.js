@@ -1,6 +1,3 @@
-// Janelle Salisbury
-//MiU 1111
-//Project 2
 
 window.addEventListener("DOMContentLoaded", function(){
 
