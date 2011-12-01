@@ -82,5 +82,43 @@ function deleteData(id) {
     }
 }
 
+$(function(){
+	$("#languages").empty();
+	$.ajax({
+		url:"XHR/data.json";
+		type:"GET";
+		dataType:"json";
+		success:function(response){
+			for(var i=0, j=response.languages.length; i<j; i++)}
+				var lang= response.languages[i];
+				$(""+
+					<div class = "language">
+					
+					
+					
+					
+					)
+		
+		
+		
+		
+		
+		
+		
+		
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 
 	
