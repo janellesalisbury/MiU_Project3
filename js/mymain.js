@@ -85,9 +85,9 @@ function deleteData(id) {
 $(function(){
 	$("#languages").empty();
 	$.ajax({
-		url:"XHR/data.json";
-		type:"GET";
-		dataType:"json";
+		url:"XHR/data.json",
+		type:"GET",
+		dataType:"json"
 		success:function(response){
 			for(var i=0, j=response.languages.length; i<j; i++)}
 				var lang= response.languages[i];
@@ -109,9 +109,9 @@ $(function(){
 $(function(){
 	$("#languages").empty();
 	$.ajax({
-		url:"XHR/data.json";
-		type:"GET";
-		dataType:"json";
+		url:"XHR/data.xml",
+		type:"GET",
+		dataType:"xml"
 		success:function(response){
 			for(var i=0, j=response.languages.length; i<j; i++)}
 				var lang= response.languages[i];
@@ -134,9 +134,9 @@ $(function(){
 $(function(){
 	$("#languages").empty();
 	$.ajax({
-		url:"XHR/data.json";
-		type:"GET";
-		dataType:"json";
+		url:"XHR/data.csv",
+		type:"GET",
+		dataType:"csv"
 		success:function(response){
 			for(var i=0, j=response.languages.length; i<j; i++)}
 				var lang= response.languages[i];
