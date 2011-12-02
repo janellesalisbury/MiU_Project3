@@ -89,6 +89,8 @@ $(document).ready(function(){
 	dataType:"xml"
 	complete:function(){
 $("#xml").listview("refresh");
+	}
+ }
 },
 	success:function(xml){
 		$(xml).find("item").each(function(){
