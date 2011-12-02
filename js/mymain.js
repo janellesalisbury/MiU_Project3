@@ -83,6 +83,48 @@ function deleteData(id) {
 }
 
 $(function(){
+	$("#json").empty();
+	$.ajax({
+		url:"XHR/data.json",
+		type:"GET",
+		dataType:"json"
+		success:function(){
+			for(var i=0, j=response.json.length; i<j; i++){
+				var lang= response.json[i];
+				$(""+
+					"<div class = "ajaxtest">"+
+					"<h2>"+ lang.name+"</h2>"+
+					"<p>"+ lang.description"</p>"+
+					"<p>" + lang.version"</p>"+
+					"</div>"
+				 ).appendTo("#languages");
+			};
+		}
+	});
+});
+
+$(function(){
+	$("#xml").empty();
+	$.ajax({
+		url:"XHR/data.xml",
+		type:"GET",
+		dataType:"xml"
+		success:function(xml){
+			for(var i=0, j=response.languages.length; i<j; i++){
+				var lang= response.languages[i];
+				$(""+
+					"<div class = "language">"+
+					"<h2>"+ lang.name+"</h2>"+
+					"<p>"+ lang.description"</p>"+
+					"<p>" + lang.version"</p>"+
+					"</div>"
+				 ).appendTo("#languages");
+			};
+		}
+	});
+});
+		
+$(function(){
 	$("#languages").empty();
 	$.ajax({
 		url:"XHR/data.json",
@@ -103,69 +145,8 @@ $(function(){
 	});
 });
 		
-		
-		
-		
-$(function(){
-	$("#languages").empty();
-	$.ajax({
-		url:"XHR/data.xml",
-		type:"GET",
-		dataType:"xml"
-		success:function(response){
-			for(var i=0, j=response.languages.length; i<j; i++)}
-				var lang= response.languages[i];
-				$(""+
-					"<div class = "language">"+
-					"<h2>"+ lang.name+"</h2>"+
-					"<p>"+ lang.description"</p>"+
-					"<p>" + lang.version"</p>"+
-					"</div>"
-				 ).appendTo("#languages");
-			};
-		}
-	});
-});
-		
-		
-		
-		
-		
-$(function(){
-	$("#languages").empty();
-	$.ajax({
-		url:"XHR/data.csv",
-		type:"GET",
-		dataType:"csv"
-		success:function(response){
-			for(var i=0, j=response.languages.length; i<j; i++)}
-				var lang= response.languages[i];
-				$(""+
-					"<div class = "language">"+
-					"<h2>"+ lang.name+"</h2>"+
-					"<p>"+ lang.description"</p>"+
-					"<p>" + lang.version"</p>"+
-					"</div>"
-				 ).appendTo("#languages");
-			};
-		}
-	});
-});
-		
-		
-		
-		
-		
+	
 
-		
-		
-		
-		
-	
-	
-	
-	
-	
 	
 	
 	
