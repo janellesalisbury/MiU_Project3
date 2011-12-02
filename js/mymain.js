@@ -108,9 +108,15 @@ $("#xml").listview("refresh");
 
 $("#csv").empty();
 $("#csv").CSVToTable("XHR/data.csv");
-});	
-	
-	
+});
 
+$.getJSON("XHR/data,json", function(data){
+var items=[];
 
-	
+$each.(data, function(key, val){
+	items.push('li id="' + key + ""> + val+ "</li>");
+};
+
+$("<li/>"),{
+	html:items.join("")
+	};.appendTo("#json");
