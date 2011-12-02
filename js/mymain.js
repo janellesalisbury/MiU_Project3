@@ -82,76 +82,33 @@ function deleteData(id) {
     }
 }
 
-$(function(){
-	$("#json").empty();
+$(document).ready(function(){
 	$.ajax({
-		url:"XHR/data.json",
-		type:"GET",
-		dataType:"json"
-		success:function(){
-			for(var i=0, j=response.json.length; i<j; i++){
-				var lang= response.json[i];
-				$(""+
-					"<div class = "ajaxtest">"+
-					"<h2>"+ lang.name+"</h2>"+
-					"<p>"+ lang.description"</p>"+
-					"<p>" + lang.version"</p>"+
-					"</div>"
-				 ).appendTo("#languages");
-			};
-		}
-	});
-});
-
-$(function(){
-	$("#xml").empty();
-	$.ajax({
-		url:"XHR/data.xml",
-		type:"GET",
-		dataType:"xml"
-		success:function(xml){
-			for(var i=0, j=response.languages.length; i<j; i++){
-				var lang= response.languages[i];
-				$(""+
-					"<div class = "language">"+
-					"<h2>"+ lang.name+"</h2>"+
-					"<p>"+ lang.description"</p>"+
-					"<p>" + lang.version"</p>"+
-					"</div>"
-				 ).appendTo("#languages");
-			};
-		}
-	});
-});
-		
-$(function(){
-	$("#languages").empty();
-	$.ajax({
-		url:"XHR/data.json",
-		type:"GET",
-		dataType:"json"
-		success:function(response){
-			for(var i=0, j=response.languages.length; i<j; i++)}
-				var lang= response.languages[i];
-				$(""+
-					"<div class = "language">"+
-					"<h2>"+ lang.name+"</h2>"+
-					"<p>"+ lang.description"</p>"+
-					"<p>" + lang.version"</p>"+
-					"</div>"
-				 ).appendTo("#languages");
-			};
-		}
-	});
-});
-		
+	type:"GET",
+	url:"XHR/data.xml",
+	dataType:"xml"
+	complete:function(){
+$("#xml").listview("refresh");
+},
+	success:function(xml){
+		$(xml).find("item").each(function(){
+		var cat= $(this).find('cat').text();
+		var piece= $(this).find('piece').text();
+		$("<li data-role="list-divider"></li>").html(cat).appendTo("#xml");
+		$("<li data-theme="f"></li>").html(piece).appendTo("#xml");
+		});
+	
+	
+	}
 	
 
-	
-	
-	
-	
-	
+
+
+});
+
+$("#csv").empty();
+$("#csv").CSVToTable("XHR/data.csv");
+});	
 	
 	
 
